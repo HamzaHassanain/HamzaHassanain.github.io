@@ -194,13 +194,12 @@
         <div class="subprojects">
           <section class="sub">
             <h4>Repovive Judge &amp; Contest Infrastructure</h4>
-            <p>Architected and deployed a distributed code-execution engine and auto-grading infrastructure. It compiles code in many languages, runs it in isolated sandboxes, and generates test cases with agentic workflows.</p>
+            <p>Led design and build of the distributed judge (<code>judge1</code>, on Judge0): multi-language compilation, isolated sandboxes, and agentic test generation.</p>
             <ul class="bullets">
-              <li>Led end-to-end design and implementation of the distributed judge (<code>judge1</code>, built on <strong>Judge0</strong>).</li>
-              <li>Scaled submission capacity <strong>10× (50 → 500+ concurrent)</strong> with a distributed, Redis-backed async pipeline.</li>
-              <li>Migrated resource-heavy workloads from serverless to <strong>Docker / Nginx / Redis</strong>, cutting core infra cost <strong>95% ($600 → $25/mo)</strong> while improving performance.</li>
-              <li>Isolated <strong>20+ programming languages</strong> in custom resource-limited Docker images.</li>
-              <li>Redesigned the database layer to support <strong>50 MB+</strong> premium contest test cases.</li>
+              <li>Scaled submissions <strong>10×</strong> (50 → 500+ concurrent) with a Redis-backed async pipeline.</li>
+              <li>Cut infra cost <strong>95%</strong> ($600 → $25/mo) by moving off serverless to Docker / Nginx / Redis.</li>
+              <li>Sandboxed <strong>20+ languages</strong> in resource-limited Docker images.</li>
+              <li>Redesigned the DB layer for <strong>50 MB+</strong> contest test cases.</li>
             </ul>
           </section>
           <section class="sub">
@@ -215,13 +214,13 @@
             </ul>
           </section>
           <section class="sub">
-            <h4>Repovive Build v2 — AI-Assisted Problem Authoring Workspace</h4>
-            <p>Co-founded and engineered a real-time collaborative IDE for competitive-programming problem setting. It replaced scattered file-based workflows with one multi-panel workspace backed by autonomous agent pipelines.</p>
+            <h4>Repovive Build v2: AI Problem-Authoring IDE</h4>
+            <p>Co-founded a real-time collaborative IDE for competitive-programming problem setting, backed by autonomous agent pipelines.</p>
             <ul class="bullets">
-              <li>Engineered an event-driven AI workflow with <strong>28 system tools</strong> for codebase manipulation and streaming turns.</li>
-              <li>Secured agent actions with server-side <strong>execution locks</strong> and atomic cancellation paths (<strong>~1s</strong> cancel).</li>
-              <li>Kept the backend stable for long-running, <strong>10-minute streaming agent sessions</strong>.</li>
-              <li>Scaled concurrent server capacity <strong>10×</strong> to handle heavy automated test runs.</li>
+              <li>Built an event-driven agent workflow with <strong>28 tools</strong> and streaming turns.</li>
+              <li>Secured agent actions with execution locks and <strong>~1s</strong> atomic cancellation.</li>
+              <li>Kept <strong>10-minute</strong> streaming agent sessions stable.</li>
+              <li>Scaled concurrent server capacity <strong>10×</strong> for automated test runs.</li>
             </ul>
           </section>
         </div>
