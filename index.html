@@ -204,10 +204,15 @@
             </ul>
           </section>
           <section class="sub">
-            <h4>AI Voice Interviews</h4>
-            <p>Worked with the team to design and build real-time, voice-first AI interviews on <strong>LiveKit</strong>, with a dedicated AI interviewer agent for each stage of the hiring loop.</p>
+            <h4>Repovive AI Interviewer Platform</h4>
+            <p>Co-built a real-time voice AI interviewer that runs live <strong>coding</strong>, <strong>recruiter</strong> and <strong>behavioral</strong> interviews, runs candidates' code in a sandbox, and grades each session against a rubric. It serves both self-serve practice and screening for business partners.</p>
             <ul class="bullets">
-              <li>Co-built three interviewer agents: <strong>recruiter</strong>, <strong>behavioral</strong> and <strong>coding</strong>.</li>
+              <li>Designed <strong>markdown-defined interviewers</strong>, so admins can add new ones without code changes. Definitions are versioned in storage, compiled into per-session plans, and edited in an admin editor.</li>
+              <li>Built the AI coding interviewer (<strong>"Kevin"</strong>). The LLM calls <strong>6 tools</strong> to reveal problem parts, tests and hints, reads the candidate's live Monaco editor, and sees their runs and submissions on the distributed judge.</li>
+              <li>Built the <strong>grading pipeline</strong>: a <strong>0–100</strong> score on <strong>4 dimensions</strong> per interview type plus a holistic overall score. It grades from real run and submission evidence rather than transcript claims, and stores the grader's reasoning for audit.</li>
+              <li>Launched <strong>B2B candidate screening</strong>: tokenized single-use invite links, no candidate account needed, automatic grading with bounded retries, and a partner dashboard that ranks candidates.</li>
+              <li>Hardened real-time turn-taking on a <strong>WebRTC</strong> voice pipeline (STT → LLM → TTS, with a <strong>1s budget to the first spoken word</strong>) across <strong>7 swappable LLM providers</strong>.</li>
+              <li>Shipped monetization: <strong>2 free attempts</strong> per interview type, then credit-based pricing, automatic refunds for sessions under <strong>60s</strong>, and a percentile-based "readiness" scorecard across past interviews.</li>
             </ul>
           </section>
           <section class="sub">
@@ -222,7 +227,7 @@
           </section>
         </div>
         <ul class="tags">
-          <li>TypeScript</li><li>Node.js</li><li>Next.js</li><li>React</li><li>Judge0</li><li>Docker</li><li>Nginx</li><li>Redis</li><li>MongoDB</li><li>PostgreSQL</li><li>WebSockets</li><li>LiveKit</li><li>AWS</li><li>DigitalOcean</li><li>Vercel</li><li>PostHog</li><li>CI/CD</li>
+          <li>TypeScript</li><li>Node.js</li><li>Next.js</li><li>React</li><li>Judge0</li><li>Docker</li><li>Nginx</li><li>Redis</li><li>MongoDB</li><li>PostgreSQL</li><li>WebSockets</li><li>LiveKit</li><li>WebRTC</li><li>LLM agents</li><li>AWS</li><li>DigitalOcean</li><li>Vercel</li><li>PostHog</li><li>CI/CD</li>
         </ul>
       </article>
     </section>
