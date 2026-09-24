@@ -220,7 +220,7 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; letter-spacing: -.01em; }
 /* Experience */
 .job__head { display: flex; gap: 1rem; align-items: center; }
 .job__logo { width: 48px; height: 48px; border-radius: 12px; border: 1px solid var(--border); background: #fff; }
-.job + .job { margin-top: 1rem; }
+.job + .job { margin-top: 2rem; }
 .job__head h3 { font-size: 1.2rem; }
 .job__blurb { margin: 1rem 0 0; color: var(--text-2); font-style: italic; }
 .subprojects { display: grid; gap: 1rem; margin-top: 1.5rem; }
