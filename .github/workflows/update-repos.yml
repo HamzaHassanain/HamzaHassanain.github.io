@@ -1,0 +1,31 @@
+name: Refresh repo data
+
+on:
+  schedule:
+    - cron: "0 4 * * 1" # every Monday 04:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate assets/data/repos.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./scripts/update-repos.sh
+      - name: Commit if changed
+        run: |
+          # Ignore the date-stamp line so an unchanged repo list doesn't create a commit
+          if git diff -U0 assets/data/repos.js | grep -E '^[+-][^+-]' | grep -vq 'Auto-generated'; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/data/repos.js
+            git commit -m "chore: refresh repo data"
+            git push
+          else
+            echo "No repo changes."
+          fi
