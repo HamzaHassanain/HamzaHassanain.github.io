@@ -1,6 +1,6 @@
 # hamzahassanain.github.io
 
-Personal site & online résumé of **Hamza Hassanain**: Founding Software Engineer @ Repovive (YC F'26),
+Personal site & online résumé of **Hamza Hassanain**: Software Engineer @ Repovive (YC F'26),
 AWS Certified Solutions Architect – Associate, 3× ACPC Finalist.
 
 Live at **https://hamzahassanain.github.io/**
